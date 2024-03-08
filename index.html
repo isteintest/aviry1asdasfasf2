@@ -1,0 +1,313 @@
+<!DOCTYPE html><html style="height: 100%;"><head>
+<script>(function(){!function(l){function r(b,a){var h=(65535&b)+(65535&a);return(b>>16)+(a>>16)+(h>>16)<<16|65535&h}function p(b,a,h,q,x,g){b=r(r(a,b),r(q,g));return r(b<<x|b>>>32-x,h)}function g(b,a,h,q,g,k,c){return p(a&h|~a&q,b,a,g,k,c)}function k(b,a,h,q,g,k,c){return p(a&q|h&~q,b,a,g,k,c)}function m(b,a,h,q,g,k,c){return p(a^h^q,b,a,g,k,c)}function n(b,a,h,q,g,k,c){return p(h^(a|~q),b,a,g,k,c)}function u(b,a){var h,q,l,p;b[a>>5]|=128<<a%32;b[14+(a+64>>>9<<4)]=a;var c=1732584193,d=-271733879,e=-1732584194,
+f=271733878;for(a=0;a<b.length;a+=16)d=n(d=n(d=n(d=n(d=m(d=m(d=m(d=m(d=k(d=k(d=k(d=k(d=g(d=g(d=g(d=g(q=d,e=g(l=e,f=g(p=f,c=g(h=c,d,e,f,b[a],7,-680876936),d,e,b[a+1],12,-389564586),c,d,b[a+2],17,606105819),f,c,b[a+3],22,-1044525330),e=g(e,f=g(f,c=g(c,d,e,f,b[a+4],7,-176418897),d,e,b[a+5],12,1200080426),c,d,b[a+6],17,-1473231341),f,c,b[a+7],22,-45705983),e=g(e,f=g(f,c=g(c,d,e,f,b[a+8],7,1770035416),d,e,b[a+9],12,-1958414417),c,d,b[a+10],17,-42063),f,c,b[a+11],22,-1990404162),e=g(e,f=g(f,c=g(c,d,e,f,
+b[a+12],7,1804603682),d,e,b[a+13],12,-40341101),c,d,b[a+14],17,-1502002290),f,c,b[a+15],22,1236535329),e=k(e,f=k(f,c=k(c,d,e,f,b[a+1],5,-165796510),d,e,b[a+6],9,-1069501632),c,d,b[a+11],14,643717713),f,c,b[a],20,-373897302),e=k(e,f=k(f,c=k(c,d,e,f,b[a+5],5,-701558691),d,e,b[a+10],9,38016083),c,d,b[a+15],14,-660478335),f,c,b[a+4],20,-405537848),e=k(e,f=k(f,c=k(c,d,e,f,b[a+9],5,568446438),d,e,b[a+14],9,-1019803690),c,d,b[a+3],14,-187363961),f,c,b[a+8],20,1163531501),e=k(e,f=k(f,c=k(c,d,e,f,b[a+13],
+5,-1444681467),d,e,b[a+2],9,-51403784),c,d,b[a+7],14,1735328473),f,c,b[a+12],20,-1926607734),e=m(e,f=m(f,c=m(c,d,e,f,b[a+5],4,-378558),d,e,b[a+8],11,-2022574463),c,d,b[a+11],16,1839030562),f,c,b[a+14],23,-35309556),e=m(e,f=m(f,c=m(c,d,e,f,b[a+1],4,-1530992060),d,e,b[a+4],11,1272893353),c,d,b[a+7],16,-155497632),f,c,b[a+10],23,-1094730640),e=m(e,f=m(f,c=m(c,d,e,f,b[a+13],4,681279174),d,e,b[a],11,-358537222),c,d,b[a+3],16,-722521979),f,c,b[a+6],23,76029189),e=m(e,f=m(f,c=m(c,d,e,f,b[a+9],4,-640364487),
+d,e,b[a+12],11,-421815835),c,d,b[a+15],16,530742520),f,c,b[a+2],23,-995338651),e=n(e,f=n(f,c=n(c,d,e,f,b[a],6,-198630844),d,e,b[a+7],10,1126891415),c,d,b[a+14],15,-1416354905),f,c,b[a+5],21,-57434055),e=n(e,f=n(f,c=n(c,d,e,f,b[a+12],6,1700485571),d,e,b[a+3],10,-1894986606),c,d,b[a+10],15,-1051523),f,c,b[a+1],21,-2054922799),e=n(e,f=n(f,c=n(c,d,e,f,b[a+8],6,1873313359),d,e,b[a+15],10,-30611744),c,d,b[a+6],15,-1560198380),f,c,b[a+13],21,1309151649),e=n(e,f=n(f,c=n(c,d,e,f,b[a+4],6,-145523070),d,e,b[a+
+11],10,-1120210379),c,d,b[a+2],15,718787259),f,c,b[a+9],21,-343485551),c=r(c,h),d=r(d,q),e=r(e,l),f=r(f,p);return[c,d,e,f]}function t(b){var a,h="",g=32*b.length;for(a=0;a<g;a+=8)h+=String.fromCharCode(b[a>>5]>>>a%32&255);return h}function v(b){var a,h=[];h[(b.length>>2)-1]=void 0;for(a=0;a<h.length;a+=1)h[a]=0;var g=8*b.length;for(a=0;a<g;a+=8)h[a>>5]|=(255&b.charCodeAt(a/8))<<a%32;return h}function y(b){var a,h="";for(a=0;a<b.length;a+=1){var g=b.charCodeAt(a);h+="0123456789abcdef".charAt(g>>>4&
+15)+"0123456789abcdef".charAt(15&g)}return h}function z(b){b=unescape(encodeURIComponent(b));return t(u(v(b),8*b.length))}function A(b,a){b=unescape(encodeURIComponent(b));a=unescape(encodeURIComponent(a));var h,g=v(b),k=[],l=[];k[15]=l[15]=void 0;16<g.length&&(g=u(g,8*b.length));for(b=0;16>b;b+=1)k[b]=909522486^g[b],l[b]=1549556828^g[b];return h=u(k.concat(v(a)),512+8*a.length),t(u(l.concat(h),640))}function w(b,a,g){return a?g?A(a,b):y(A(a,b)):g?z(b):y(z(b))}"function"==typeof define&&define.amd?
+define(function(){return w}):"object"==typeof module&&module.exports?module.exports=w:l.md5=w}(this);var l=(new URLSearchParams(window.location.search)).get("lptoken");if(l){var t=l.substr(0,2)+l.substr(4,2)+l.substr(8,2)+l.substr(12,2)+l.substr(16,2);l=l.substr(2,2)+l.substr(6,2)+l.substr(10,2)+l.substr(14,2)+l.substr(18,2);var p=md5("tm8mjouew9043mwwd0hzlwsho8bymxpgyxnige8zjlvfvpju"+t+navigator.userAgent);p=p.substr(0,2)+p.substr(5,2)+p.substr(12,2)+p.substr(19,2)+p.substr(26,2);if(Date.now()/1E3>Number(t)||p!==l)window&&window.stop()||
+stop()}else window&&window.stop()||stop()})();
+</script>
+
+	<meta charset="utf-8">
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>AVIRA ANTIVIRUS PRO</title>
+
+	<meta name="description" content="AVIRA ANTIVIRUS PRO">
+	<link rel="shortcut icon" href="3f8143e1d5a245928e6df5bf0c43eef2.static.png">
+
+	<link rel="stylesheet" type="text/css" href="57c4c186a877ee0e0942ebdca52912ba.static.css">
+    <script src="beea4ce79f7cd789047ab2bed51c3980.static.js"></script>
+    <script src="836a29b6c3386fe853fa3c25e8dd16d7.static.js"></script>
+    <script src="c3e1a1fc3affb3cba7c8226d5b7e9d83.static.js"></script><script type="text/javascript" async="" src="d5a41c3521d21ced40249aa776ab7dc6.static.js?cb=googleTranslateElementInit"></script>
+    <script src="49e3ca22240cb83f7b4b0d1bf43f149d.static.js"></script>
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="428c4eb57af54c8b4fe2a39c9cbb9144.static.css"><script type="text/javascript" charset="UTF-8" src="5b22a1f5aecfeb0e986c7fadf8e8d767.static.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.5/css/froala_style.min.css"></head>
+
+<body style="position: relative; min-height: 100%; top: 0px;">
+
+
+<header>
+
+	<div class="container">
+		<ul>
+			<li><a href="#">Support</a></li> 
+			<li><a><img src="d1aa29e3f4fbf2d2e6e0399117f3c6f1.static.svg"></a></li> 
+			<li><a><b>Anmelden</b></a></li>
+		</ul>
+	</div>
+</header>
+
+
+<section>
+	<div class="container">
+		<h3>Cyber-Bedrohungen entwickeln sich weiter. So auch unsere Verteidigung.</h3>
+		<button>AVIRA ANTIVIRUS PRO</button>
+
+		<div class="complete">
+			<img src="c9595b50d811b8e3250b86cd7b1a83c0.static.png">
+			
+			<h5><strong>Komplette Absicherung</strong> für ihr Computerleben</h5>
+			<p>Erweitern Sie mit AVIRA ANTIVIRUS PRO Ihren Online-Schutz und Ihre Privatsphäre mit einer einfachen All-in-One-Sicherheitslösung. Verbinden Sie sich sicher von Ihrer Handfläche aus, wohin Sie auch gehen.</p>
+		</div>
+	</div>
+</section>
+
+
+<div class="main-first" style="opacity: 1;">
+
+	<div class="head">
+		<img src="3f8143e1d5a245928e6df5bf0c43eef2.static.png">
+		AVIRA ANTIVIRUS PRO
+
+		<span class="icons">
+			<img src="300413d767b2b99382872e4616f10fae.static.png">
+			<img src="643bf6775ad7b3d12586ffd88e00e3f9.static.png">
+		</span>
+	</div>
+
+	<div class="body">
+		<h1>Schneller Scan</h1>
+		<p>Scannen häufig infizierter Bereiche und Startdateien ...</p>
+
+		<div class="progress">
+              <div class="project">
+                <div class="total">Datein gescannt: <span id="cont">49652</span></div>
+                
+                <div class="green-red">
+                  
+                  <div class="move" percent="25%" style="width: 100%; background: rgb(192, 24, 24); transition: all 0s ease 0s;"></div>
+                </div>
+
+              </div>
+          </div>
+
+          <div class="mix-wirds">C:WindowsSystem32Kdscli.dll</div>
+
+
+         <div class="summa">
+			Insgesamt erkannte Sicherheitsrisiken: <i class="tsrd" style="color: rgb(192, 24, 24);">1</i>
+
+			<table class="tab" style="display: table;">
+				<tbody>
+					<tr class="one">
+						<td class="table-1">1. Virus</td>
+						<td>Win32/Hoax.Renos.HX</td>
+						<td>Risikostufe: HOCH</td>
+					</tr>
+					
+					<tr class="two">
+						<td class="table-1">2. Virus</td>
+						<td>Trojaner IRC/Backdoor.sd</td>
+						<td>Risikostufe: HOCH</td>
+					</tr>
+					
+					<tr class="three">
+						<td class="table-1">3. Adware</td>
+						<td>Win32/Look2me.ab</td>
+						<td>Risikostufe: Mittel</td>
+					</tr>
+					
+					<tr class="four">
+						<td class="table-1">4. Virus </td>
+						<td>Trojaner Keylogger</td>
+						<td>Risikostufe: HOCH</td>
+					</tr>
+
+					<tr class="five">
+						<td class="table-1">5. Malware</td>
+						<td>Data crawler.exe  </td>
+						<td>Risikostufe: Mittel</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="summa">
+			[+] Insgesamt Sicherheitsrisiken gelöst: <i class="tsrr">0</i>
+		</div>
+
+		<div class="summa">
+			Gesamtsicherheitsrisiken die Aufmerksamkeit erfordern:  <i class="tsrra" style="color: rgb(192, 24, 24);">1</i>
+		</div>
+	</div>
+
+	<img class="tog" src="cfbb8a61fd2d7fd3f9b858de845d9e4e.static.png">
+
+</div>
+
+
+<div class="main-second">
+	<div class="head">
+		<img src="2bafa9e918d65d96d58b85167c141fb8.static.png">
+		
+  			
+  			TROJANER_2024 und 5 andere Viren erkannt.
+  		
+
+		<span class="icons">
+			<a href="https://track.track43439.com/click"><img src="117f12fd9dedbfd6cf6790d2e8755d03.static.png"></a>
+			<a href="https://track.track43439.com/click"><img src="cf324d0f981a02f76c62d20dc1ab6b71.static.png"></a>
+		</span>
+	</div>
+
+	<div class="body">
+		<i><strong>Scan-Ergebnisse:</strong> 2024_TROJANER-Virus, Passwort_SPY, AdSwitcher erkannt</i>
+		
+		<i class="elem">- Der auf diesem PC gefundene Trojaner kopiert und löscht höchstwahrscheinlich alle Daten von den Festplatten.</i>
+		
+		<i class="elem">- Spyware versucht, Anmeldedaten, Passwörter und Bankdaten zu sammeln.</i>
+
+		<i class="elem">- Adware ersetzt Suchergebnisse normalerweise durch falsche und betrügerische Websites. </i>
+
+		<strong class="rec">Löschen nicht möglich! Ihr Virenschutz ist abgelaufen! Bitte sofort Avira erneuern um Viren zu löschen und Ihren PC zu sichern!</strong>
+	</div>
+
+	<div class="url"><a href="https://track.track43439.com/click">JETZT ERNEUERN</a></div>
+
+</div>
+
+<div class="fly fly_1" style="display: block; bottom: 20px;">
+	<div class="head">
+		<strong>Bedrohung erkannt!</strong>
+		<i>Trojaner.Fakealert.356</i>
+	</div>
+
+	<div class="body">
+		<ul>
+			<li>
+				<img src="a3597ce0497c087eb895a508751e0ad0.static.gif">
+				Hohes Risiko
+			</li>
+			<li>
+				<img src="edb29250d85a8eec2d1f6022899274f2.static.gif">
+				Herkunft
+				<span>Nicht verfügbar</span>
+			</li>
+			<li>
+				<img src="879b5515d79cd74dd29509c416c266d1.static.gif">
+				Aktivität
+				<span>Durchgeführte Aktionen: 1</span>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="fly fly_2">
+	<div class="head">
+		<strong>Bedrohung erkannt!</strong>
+		<i>Trojan IRC/Backdor.Sd.FRV</i>
+	</div>
+
+	<div class="body">
+		<ul>
+			<li>
+				<img src="a3597ce0497c087eb895a508751e0ad0.static.gif">
+				Hohes Risiko
+			</li>
+			<li>
+				<img src="edb29250d85a8eec2d1f6022899274f2.static.gif">
+				Herkunft
+				<span>Nicht verfügbar</span>
+			</li>
+			<li>
+				<img src="879b5515d79cd74dd29509c416c266d1.static.gif">
+				Aktivität
+				<span>Durchgeführte Aktionen: 1</span>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="fly fly_3">
+	<div class="head">
+		<strong>Bedrohung erkannt!</strong>
+		<i>Adware.Win32.Look2me.ab</i>
+	</div>
+
+	<div class="body">
+		<ul>
+			<li>
+				<img src="a3597ce0497c087eb895a508751e0ad0.static.gif">
+				Hohes Risiko
+			</li>
+			<li>
+				<img src="edb29250d85a8eec2d1f6022899274f2.static.gif">
+				Herkunft
+				<span>Nicht verfügbar</span>
+			</li>
+			<li>
+				<img src="879b5515d79cd74dd29509c416c266d1.static.gif">
+				Aktivität
+				<span>Durchgeführte Aktionen: 1</span>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="fly fly_4">
+	<div class="head">
+		<strong>Bedrohung erkannt!</strong>
+		<i>Trojan.Qoologic - Key Logger</i>
+	</div>
+
+	<div class="body">
+		<ul>
+			<li>
+				<img src="a3597ce0497c087eb895a508751e0ad0.static.gif">
+				Hohes Risiko
+			</li>
+			<li>
+				<img src="edb29250d85a8eec2d1f6022899274f2.static.gif">
+				Herkunft
+				<span>Nicht verfügbar</span>
+			</li>
+			<li>
+				<img src="879b5515d79cd74dd29509c416c266d1.static.gif">
+				Aktivität
+				<span>Durchgeführte Aktionen: 1</span>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="fly fly_5">
+	<div class="head">
+		<strong>Bedrohung erkannt!</strong>
+		<i>Trojan.Fakealert.356</i>
+	</div>
+
+	<div class="body">
+		<ul>
+			<li>
+				<img src="a3597ce0497c087eb895a508751e0ad0.static.gif">
+				Hohes Risiko
+			</li>
+			<li>
+				<img src="edb29250d85a8eec2d1f6022899274f2.static.gif">
+				Herkunft
+				<span>Nicht verfügbar</span>
+			</li>
+			<li>
+				<img src="879b5515d79cd74dd29509c416c266d1.static.gif">
+				Aktivität
+				<span>Durchgeführte Aktionen: 1</span>
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+<span class="overflov" style="background: rgba(192, 24, 24, 0.17);"></span>
+<span class="overflov_2"></span>
+
+<script>
+ setTimeout(function() {
+
+
+
+}, 500);
+</script>
+
+<div class="VIpgJd-ZVi9od-aZ2wEe-wOHMyf"><div class="VIpgJd-ZVi9od-aZ2wEe-OiiCO"><svg xmlns="http://www.w3.org/2000/svg" class="VIpgJd-ZVi9od-aZ2wEe" width="96px" height="96px" viewBox="0 0 66 66"><circle class="VIpgJd-ZVi9od-aZ2wEe-Jt5cK" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div></body></html>
